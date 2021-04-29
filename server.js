@@ -1,6 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
 const url = "mongodb+srv://yvesdrop:memorysucks00@cluster0.p16bt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-var port = process.env.PORT || 8000;
+var port = process.env.PORT || 3000;
 
 var http = require('http');
 
