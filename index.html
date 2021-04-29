@@ -1,0 +1,58 @@
+<html>
+    <head>
+    <title>Assignment Week 14: Stock Ticker Query</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+    </head>
+
+    <body>
+    <div id="box">
+        <h2>Please enter a company name OR a company ticker.
+        </h2>
+        <form name="form1" action="https://git.heroku.com/companies00.git">
+            <table>
+                <tr>
+                    <th id="one">
+                        <label class="switch" for="toggle">
+                            <input type="checkbox" name="toggle" id="toggle" onclick="myFunction()">
+                            <span class="slider"></span>
+                        </label>
+                    </th>
+                    <th id="two">
+                        <div id="text" >Ticker Symbol</div>
+                    </th>
+                    <th id="three">
+                        <input type="text" name="query" id="field" placeholder="AAPL">
+                    </th>
+                    <th id="four">
+                        <input type="submit">
+                    </th>
+                </tr>
+            </table>
+
+        <br><br>
+
+        
+
+            
+        </form>  
+
+        <script>
+            function myFunction() {
+                var checkBox = document.getElementById("toggle");
+                var text = document.getElementById("text");
+                if (checkBox.checked == true) {
+                    text.innerHTML = "Company Name";
+                    document.getElementById("field").placeholder="Apple Inc.";
+                }
+                else {
+                    text.innerHTML = "Ticker Symbol";
+                    document.getElementById("field").placeholder="AAPL";
+                }
+            }
+        </script>
+    </div>
+    </body>
+</html>
